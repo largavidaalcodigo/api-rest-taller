@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Proyecto Prueba: Saludos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<h1>Listado de Saludos</h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Saludo</th>
+    </tr>
+    <tr th:each="saludo : ${listaSaludos}">
+        <td th:text="${saludo.id}"></td>
+        <td th:text="${saludo.content}"></td>
+    </tr>
+</table>
+
+</body>
+
+</html>
